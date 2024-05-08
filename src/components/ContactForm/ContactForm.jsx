@@ -2,7 +2,16 @@ import styles from "./ContactForm.module.css";
 import Button from "../Button/Button";
 import { MdMessage } from "react-icons/md";
 import { IoMdCall } from "react-icons/io";
-function ContactForm() {
+function ContactForm({
+  name,
+  email,
+  text,
+  setName,
+  setEmail,
+  setText,
+  isSubmitted,
+  setIsSubmitted,
+}) {
   return (
     <section className={`${styles.container}`}>
       <div className={`${styles.contact_form}`}>
@@ -25,17 +34,32 @@ function ContactForm() {
         <form>
           <div className={`${styles.input_wrapper}`}>
             <label className={`${styles.label}`}>Name</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div className={`${styles.input_wrapper}`}>
             <label className={`${styles.label}`}>E-mail</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className={`${styles.input_wrapper}`}>
             <label className={`${styles.label}`}>Text</label>
-            <textarea rows={10} cols={46}></textarea> 
+            <textarea
+              rows={10}
+              cols={46}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            ></textarea>
           </div>
-          <Button>Submit</Button>
+          <Button isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted}>
+            Submit
+          </Button>
         </form>
       </div>
       <div className={`${styles.contact_image}`}>

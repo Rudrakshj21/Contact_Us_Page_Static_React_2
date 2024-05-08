@@ -45,11 +45,15 @@ form {
 form input {
   width: 360px;
   height: 40px;
-
+  
 }
 form input[type = 'text']{
   padding: 10px;
   font-size:medium;
+}
+textarea{
+  padding-top: 20px;
+  padding-left: 10px;
 }
 .input_wrapper {
   position: relative;
