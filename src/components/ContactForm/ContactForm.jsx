@@ -21,8 +21,26 @@ function ContactForm() {
             <MdMessage className={`${styles.icon}`} /> VIA EMAIL FORM
           </Button>
         </div>
+
+        <form>
+          <div className={`${styles.input_wrapper}`}>
+            <label className={`${styles.label}`}>Name</label>
+            <input type="text" />
+          </div>
+          <div className={`${styles.input_wrapper}`}>
+            <label className={`${styles.label}`}>E-mail</label>
+            <input type="text" />
+          </div>
+          <div className={`${styles.input_wrapper}`}>
+            <label className={`${styles.label}`}>Text</label>
+            <textarea rows={10} cols={46}></textarea> 
+          </div>
+          <Button>Submit</Button>
+        </form>
       </div>
-      <div className={`${styles.contact_image}`}></div>
+      <div className={`${styles.contact_image}`}>
+        <img src="/images/service.png" alt="service_image" />
+      </div>
     </section>
   );
 }
