@@ -1,7 +1,7 @@
 import styles from "./ContactHeader.module.css";
 function ContactHeader() {
   return (
-    <div className="container">
+    <div className={`${styles.container}`}>
       <h1 className={`${styles.header}`}>Contact Us</h1>
       <p className={`${styles.content}`}>
         LET’S CONNECT: WE’RE HERE TO HELP, AND WE’D LOVE TO HEAR FROM YOU!

@@ -44,16 +44,22 @@ form {
 }
 form input {
   width: 360px;
-  height: 35px;
+  height: 40px;
 
+}
+form input[type = 'text']{
+  padding: 10px;
+  font-size:medium;
 }
 .input_wrapper {
   position: relative;
 }
 .label {
+  font-weight: bold;
   position: absolute;
   top: -10px;
   left: 10px;
   padding: 0 5px;
   background-color: white;
+  font-size: 15px;
 }

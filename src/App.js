@@ -6,8 +6,10 @@ function App() {
   return (
     <div>
       <Navigation />
-      <ContactHeader />
-      <ContactForm />
+      <div className="main">
+        <ContactHeader />
+        <ContactForm />
+      </div>
     </div>
   );
 }
